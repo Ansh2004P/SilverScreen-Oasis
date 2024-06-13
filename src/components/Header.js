@@ -44,10 +44,11 @@ const Header = () => {
       .then(() => {
         //Sign Out successFull
         dispatch(removeUser());
+        navigate("/");
       })
       .catch((error) => {});
     //SignOut Failed
-    navigate("/error");
+    navigate("/xyz");
   };
   return (
     <div className="h-20 w-full absolute bg-gradient-to-b from-black flex flex-row">
