@@ -44,10 +44,14 @@ const Login = () => {
           }).then(() => {
             const { uid, email, displayName } = auth.currentUser;
             dispatch(
-              addUser({ uid: uid, email: email, displayName: displayName, photoURL: USER_AVATAR})
+              addUser({
+                uid: uid,
+                email: email,
+                displayName: displayName,
+                photoURL: USER_AVATAR,
+              })
             );
           });
-          navigate("/browse");
           // console.log(user);
         })
         .catch((error) => {
@@ -62,10 +66,9 @@ const Login = () => {
         email.current.value,
         password.current.value
       )
- .then((userCredential) => {
+        .then((userCredential) => {
           //Signed in
           const user = userCredential.user;
-          navigate("/browse");
           console.log(user);
         })
         .catch((error) => {
