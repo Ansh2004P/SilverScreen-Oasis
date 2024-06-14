@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser } from "../utils/userSlice";
+import { removePlaying } from "../utils/movieSlice";
 
 const Header = () => {
   const user = useSelector((state) => state.user); // subscribing to the store
@@ -30,6 +31,7 @@ const Header = () => {
         navigate("/browse");
       } else {
         // User is Signed out
+        dispatch(removePlaying());
         dispatch(removeUser());
         navigate("/");
       }
@@ -51,7 +53,7 @@ const Header = () => {
     navigate("/xyz");
   };
   return (
-    <div className="h-20 w-full absolute bg-gradient-to-b from-black flex flex-row">
+    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-20 flex flex-col md:flex-row justify-between">
       <img
         className="h-20 w-1/5 object-contain p-2 m-4"
         src={LOGO}

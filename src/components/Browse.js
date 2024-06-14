@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import useNowPlayingHook from "../hooks/nowPlayingHook";
+import MainContainer from "./MainContainer";
 
 const Browse = () => {
   useNowPlayingHook();
@@ -8,6 +9,8 @@ const Browse = () => {
   return (
     <div>
       <Header />
+      
+      <MainContainer />
     </div>
   );
 };
