@@ -21,6 +21,8 @@ const useNowPlayingHook = () => {
 
   useEffect(() => {
     nowPlayingMovieList();
+
+    return; 
   }, []);
 };
 

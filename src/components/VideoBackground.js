@@ -8,7 +8,7 @@ const VideoBackground = ({ movieId }) => {
   useMovieTrailer(movieId);
 
   return (
-    <div className="w-screen -z-20 bg-red-500">
+    <div className="w-full ">
       <iframe
       loading="lazy"
         className="w-screen aspect-video "
@@ -17,6 +17,7 @@ const VideoBackground = ({ movieId }) => {
           trailer?.key +
           "?autoplay=1&mute=1&loop=1&controls=0&playlist="+ trailer?.key
         }
+        
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>

@@ -7,14 +7,25 @@ export const USER_AVATAR =
 export const BG_URL =
   "https://assets.nflxext.com/ffe/siteui/vlv3/cacfadb7-c017-4318-85e4-7f46da1cae88/e43aa8b1-ea06-46a5-abe3-df13243e718d/IN-en-20240603-popsignuptwoweeks-perspective_alpha_website_medium.jpg";
 
+export const SEARCH_URL =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/51c1d7f7-3179-4a55-93d9-704722898999/be90e543-c951-40d0-9ef5-e067f3e33d16/IN-en-20240610-popsignuptwoweeks-perspective_alpha_website_medium.jpg";
+
 export const ERROR_URL =
   "https://cdn.tinybuddha.com/wp-content/uploads/2016/05/Lost.png";
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
 export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZjJhNGY2ZjhlNTY0Zjk2NmI4YThkYWU3ZDEzZWViMiIsInN1YiI6IjY2NmFiNzNkYjEyM2I5NzFkNzM4MjBmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5R8KCKh4nTjHC-OxCfEitS-rcQZz2Pm57qYZlBMl7zQ",
+     `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
   },
 };
+
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" },
+];
