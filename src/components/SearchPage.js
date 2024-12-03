@@ -10,7 +10,7 @@ const SearchPage = () => {
         <img className="object-cover" src={SEARCH_URL} alt={"Background"}></img>
       </div>
       <SearchBar />
-      <GptKey />
+      {/* <GptKey /> */}
       <GptMovieSuggestions />
     </div>
   );
